@@ -36,10 +36,22 @@ accounts = {
         "Gender" : "Male"
     }
 }
+
+
 #ask the user
 choice = int(input("Enter a number that you would like to do: "))
 #if option 1 = add item
 if choice == 1:
+    name = input("Enter the fullname (first name, surname): ")
+    age = int(input("Enter his/her age: "))
+    status = input("Enter the status of the person: ")
+    gender = input("Enter the gender: ")
+    accounts[name] = {
+        "Age": age,
+        "Status" : status,
+        "Gender" : gender
+    }
+print(accounts)
     
 #if option 2 = search
 #if option 3 = exit
