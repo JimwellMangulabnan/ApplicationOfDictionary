@@ -15,12 +15,12 @@ print("#######################")
 print()
 #listed Accounts
 accounts = {
-    "harry Potter" : {
+    "Harry Potter" : {
         "Age": 19,
         "Status" : "Single",
         "Gender" : "Male"
     },
-    "enola Homes" : {
+    "Enola Homes" : {
         "Age": 16,
         "Status" : "Single",
         "Gender" : "Female"
@@ -51,7 +51,21 @@ if choice == 1:
         "Status" : status,
         "Gender" : gender
     }
-print(accounts)
+    print("Succesfully added!!!\n")
+    print("this is the accounts have been updated: ", accounts)
     
 #if option 2 = search
+if choice == 2:
+    fullname = input("Please Enter the Fullname you would like to search or type ALL to see all: ")
+    if fullname == "ALL":
+        for key, value in accounts.items():
+            print ("Name: " + key)
+            print ("info: " + str(value) + "\n")
+    elif fullname in accounts:
+        print ("Name: " + fullname)
+        print ("info: " + str(accounts[fullname]))
+    else:
+        print("I'm Sorry, invalid input!!!")
+
+        
 #if option 3 = exit
