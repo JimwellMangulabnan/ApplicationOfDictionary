@@ -24,22 +24,26 @@ accounts = {
     "Harry Potter" : {
         "Age": 19,
         "Status" : "Single",
-        "Gender" : "Male"
+        "Gender" : "Male",
+        "Saving" : "5000$"
     },
     "Enola Homes" : {
         "Age": 16,
         "Status" : "Single",
-        "Gender" : "Female"
+        "Gender" : "Female",
+        "Saving" : "800$"
     },
     "Marian Rivera" : {
         "Age": 30,
         "Status" : "Married",
-        "Gender" : "Female"
+        "Gender" : "Female",
+        "Saving" : "3000$"
     },
     "Naruto Uzumaki " : {
         "Age": 47,
         "Status" : "widow",
-        "Gender" : "Male"
+        "Gender" : "Male",
+        "Saving" : "10000$"
     }
 }
 
@@ -53,10 +57,12 @@ while True:
         age = int(input("Enter his/her age: "))
         status = input("Enter the status of the person: ")
         gender = input("Enter the gender: ")
+        money = input("please Enter your money savings: (with $ sign)")
         accounts[name] = {
             "Age": age,
             "Status" : status,
-            "Gender" : gender
+            "Gender" : gender,
+            "Saving" : money
         }
         print("Succesfully added!!!\n")
         print("this is the accounts have been updated: ", accounts)
@@ -75,7 +81,7 @@ while True:
             print ("info: " + str(accounts[fullname]))
         else:
             print("I'm Sorry, invalid input!!!")
-            print_menu()
+        print_menu()
 
             
     #if option 3 = exit
@@ -85,12 +91,7 @@ while True:
         if decision == 1:
             print_menu()
         else:
-            break
-
-
-
-
-        print("""
+            print("""
         ===================================
         |                                 |
         |           Thank You             |
@@ -98,3 +99,4 @@ while True:
         |                                 |
         ===================================  
         """)
+            break  
